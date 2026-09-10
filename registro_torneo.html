@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro para Torneo de Videojuegos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    td {
+      border: 1px solid #000000;
+      padding: 8px;
+    }
+
+    td.etiqueta {
+      width: 40%;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      margin-right: 10px;
+      padding: 6px 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Registro para Torneo de Videojuegos</h1>
+
+  <form>
+    <table>
+      <tr>
+        <td class="etiqueta">Nombre del jugador</td>
+        <td>
+          <input type="text" name="nombre" required minlength="3" maxlength="15">
+        </td>
+      </tr>
+
+      <tr>
+        <td class="etiqueta">Correo electrónico</td>
+        <td>
+          <input type="email" name="correo" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="etiqueta">Edad</td>
+        <td>
+          <input type="number" name="edad" required min="12" max="40">
+        </td>
+      </tr>
+
+      <tr>
+        <td class="etiqueta">Nickname en el juego</td>
+        <td>
+          <input type="text" name="nickname" required pattern="[A-Za-z0-9]+" title="Solo letras y números, sin espacios">
+        </td>
+      </tr>
+
+      <tr>
+        <td class="etiqueta">Categoría</td>
+        <td>
+          <label><input type="radio" name="categoria" value="Principiante" required> Principiante</label>
+          <label><input type="radio" name="categoria" value="Intermedio"> Intermedio</label>
+          <label><input type="radio" name="categoria" value="Experto"> Experto</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="etiqueta">Juegos favoritos</td>
+        <td>
+          <label><input type="checkbox" name="juegos" value="FIFA"> FIFA</label>
+          <label><input type="checkbox" name="juegos" value="LoL"> LoL</label>
+          <label><input type="checkbox" name="juegos" value="Minecraft"> Minecraft</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="etiqueta">Fecha de inscripción</td>
+        <td>
+          <input type="date" name="fecha" required min="2025-01-01" max="2025-12-31">
+        </td>
+      </tr>
+    </table>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Restablecer</button>
+  </form>
+
+</body>
+</html>
